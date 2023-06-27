@@ -1,35 +1,65 @@
-@import './base.css';
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Raleway:wght@700&display=swap');
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-
-  font-weight: normal;
+*,
+*::before,
+*::after {
+  margin: 0;
 }
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-}
-
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
+main {  
+  &:first-child {
+    color: #333;
+    text-align: center;
+    font-size: 2.25rem;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: -0.10125rem;
+    margin-top: 2rem;
   }
 }
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
+.filters {
+  margin-top: 3.62rem;
+  display: flex;
+  width: 38rem;
+  justify-content: space-around;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-bottom: 1.19rem;
+
+  &::before {
+    content: '';
+    width: 38rem;
+    height: 0.0625rem;
+    background: #BDBDBD;
+    bottom: 0;
+    position: absolute;
   }
 
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
+  & button {
+    border: none;
+    background-color: white;
+    color: #333;
+    font-size: 0.875rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    position: relative;
+  }
+
+  & button::before {
+    content: '';
+    position: absolute;
+    height: 0.25rem;
+    border-radius: 4px 4px 0px 0px;
+    background: #2F80ED;
+    bottom: -19px;
+    left: 0;
+    right: 0;
+    opacity: 0;
+  }
+
+  & button:hover::before {
+    opacity: 1;
   }
 }
