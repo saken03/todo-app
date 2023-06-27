@@ -23,10 +23,9 @@ function filter(chosen) {
       </div>
 
       <div class="input">
-        <input type="text">
+        <input type="text" placeholder="add details">
         <button>Add</button>
       </div>
-
       <div class="output">
         
       </div>
